@@ -287,9 +287,7 @@ ggplot()+
 reduced_bikeshareProjection_df_top1<-read.csv("2018-04-22_Union Projection Map.csv")
 
 # Map projection
-################################
-# Should be a mapbox token here
-################################
+Sys.setenv('MAPBOX_TOKEN' = 'pk.eyJ1IjoiYW50aG9ueS1pb25ubyIsImEiOiJjamZ5c3RkOG01NjJqMndxb2IwZndpNGszIn0.oc2osy7XTF5YcjXqVtkkIw')
 p <- plot_mapbox(mode = 'scattermapbox') %>%
   add_segments(
     data = reduced_bikeshareProjection_df_top1,
